@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Test stage (R03 test 5): records its PID in --out and sleeps past any sane timeout.
+set -u
+OUT=""
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --out) OUT="${2:?}"; shift 2 ;;
+    *) shift ;;
+  esac
+done
+mkdir -p "$OUT"
+echo $$ > "$OUT/pid"
+sleep 30
+echo "should never get here" > "$OUT/late.txt"

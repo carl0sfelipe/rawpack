@@ -13,7 +13,7 @@ de entrar aqui (ver `incidents/2026-09-20-dogfood-llms-surf-v4-1-0.md`).
 R00 semente: contrato do pack + verificador Kotlin + estágio de referência   DONE (oráculo verde 2026-09-20)
 R01 probe de capacidades do S25 Ultra (Android)                              ── define o que o pack pode ter
 R02 app de captura v0 (Kotlin, CameraX 1.5, tus)                            ── depende de R00 (schema) e R01 (modos)
-R03 orquestrador: ingest tus + fila + runner de estágios (Ktor)              ── depende de R00
+R03 orquestrador: ingest tus + fila + runner de estágios (Ktor)              ── depende de R00  DONE (oráculo verde 2026-09-20)
 R04 estágios reais: s1-fuse (hdrplus/MFSR) + s2-develop (darktable/vkdt)     ── depende de R00; roda na 3090
 R05 revisão HITL mobile-first (Ktor + HTMX)                                  ── depende de R03
 R06 publicação no Immich + XMP da receita                                    ── depende de R05

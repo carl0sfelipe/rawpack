@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Test stage (R03 test 4): fails loudly with exit 4 and a marker on stderr.
+set -u
+echo "boom exit four: missing input marker" >&2
+exit 4

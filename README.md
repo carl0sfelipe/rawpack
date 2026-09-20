@@ -24,7 +24,7 @@ incident). Specs are written for and validated by [llms.surf](https://github.com
 | R00 | Pack contract (`pack.schema.json`), Kotlin models + `PackVerifier`, reference stage `s0-identity` | **done** — `./gradlew :shared:pack-schema:test` green (7 tests) |
 | R01 | Capability probe app for the S25 Ultra | spec |
 | R02 | Capture app v0 (CameraX 1.5 RAW+JPEG burst, IMU, tus upload) | spec |
-| R03 | Orchestrator: tusd hook → verify → SQLite queue → stage runner | spec |
+| R03 | Orchestrator: tusd hook → verify → SQLite queue → stage runner | **done** — `./gradlew :apps:orchestrator:test` green (5 tests), 2026-09-20 |
 | R04 | Real stages: `s1-fuse` (HDR+/MFSR), `s2-develop` (darktable/vkdt) | spec |
 | R05 | Human-in-the-loop review, mobile-first (Ktor + HTMX) | spec |
 | R06 | Publish approved candidate to Immich + XMP recipe | spec |
@@ -42,7 +42,7 @@ fixtures/pack-minimal/  a valid pack whose frames are text placeholders (contrac
 specs/                  one story per file, one oracle per story (llms.surf format)
 bench/                  same pack, same oracle, every implementation
 incidents/              diary entries in the llms.surf format
-apps/orchestrator/      Ktor server (arrives with R03)
+apps/orchestrator/      Ktor server: tusd hook, SQLite queue, stage runner [R03]
 apps/android/           separate Gradle build with the Android SDK (R01, R02)
 ```
 
